@@ -7,9 +7,15 @@ class welcomeScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Positioned.fill(
-          //
-          // ),
+          Positioned.fill(
+            child: Image(
+              image: AssetImage(
+                'assets/images/Group 227@2x.png',
+              ),
+              fit: BoxFit.cover,
+            ),
+
+          ),
           GestureDetector(
             onTap: (){},   // To be implemented
           ),
@@ -29,6 +35,7 @@ class welcomeScreen extends StatelessWidget {
                 ),
               )
           ),
+
         ],
       ),
 

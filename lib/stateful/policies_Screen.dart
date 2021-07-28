@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seyana_tech/color.dart';
 import 'package:seyana_tech/reusableItems.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class policies extends StatefulWidget {
 
@@ -27,7 +28,7 @@ class _policiesState extends State<policies> {
           elevation: 0.0,
           centerTitle: true ,
           title: Text(
-            'الشروط و القوانين',
+            AppLocalizations.of(context).termsAndConditions,
             textDirection: TextDirection.rtl,
             style: TextStyle(
                 color: Colors.black,
@@ -48,11 +49,11 @@ class _policiesState extends State<policies> {
                   image: AssetImage('assets/images/Artboard 1@3x.png'),
                 ),
               ),
-              textWidget('هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.',),
-              textWidget('هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.'),
+              textWidget(AppLocalizations.of(context).termsAndCond_Text,),
+              textWidget(AppLocalizations.of(context).termsAndCond_Text,),
 
               SizedBox(height: 40.0,),
-              reusedButton('موافق', (){})
+              reusedButton(AppLocalizations.of(context).agree, (){})
 
 
             ],

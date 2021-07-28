@@ -1,6 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:seyana_tech/main.dart';
 import 'package:seyana_tech/reusableItems.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class Settings extends StatefulWidget {
   @override
@@ -19,7 +24,7 @@ class _SettingsState extends State<Settings> {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          'الاعدادات',
+          AppLocalizations.of(context).settings,
           textDirection: TextDirection.rtl,
           style: TextStyle(
               color: Colors.black,
@@ -39,10 +44,11 @@ class _SettingsState extends State<Settings> {
                 image: AssetImage('assets/images/Artboard 1@3x.png'),
               ),
             ),
-            SettingsReusableCard('الحساب البنكى', 'assets/images/wallet@3x.png',(){}),
-            SettingsReusableCard('اللغة', 'assets/images/worlwide@3x.png',(){}),
-            SettingsReusableCard('اتصل بنا', 'assets/images/about-us@3x.png',(){}),
-            SettingsReusableCard('عن التطبيق', 'assets/images/about-us@3x.png',(){})
+            SettingsReusableCard(AppLocalizations.of(context).bankAccount, 'assets/images/wallet@3x.png',(){}),
+            SettingsReusableCard(AppLocalizations.of(context).language, 'assets/images/worlwide@3x.png', () {
+                }),
+            SettingsReusableCard(AppLocalizations.of(context).contactUs, 'assets/images/call-center-worker-with-headset@3x.png',(){}),
+            SettingsReusableCard(AppLocalizations.of(context).aboutApp, 'assets/images/about-us@3x.png',(){})
           ],
         ),
       ),
@@ -70,30 +76,32 @@ class _SettingsState extends State<Settings> {
               icon: Icon(
                 Icons.settings,
               ),
-            label: 'الإعدادات',
+            label: AppLocalizations.of(context).navSettings,
           ),
           BottomNavigationBarItem(
               icon: Icon(
-                  Icons.minimize_outlined
+                  Icons.person
                 ),
-              label: 'الحساب'
+              label: AppLocalizations.of(context).navProfile
           ),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.notifications
               ),
 
-              label: 'الاشعارات'
+              label: AppLocalizations.of(context).navNotifications
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.minimize_outlined
+              icon: Icon(
+                  Icons.sticky_note_2_outlined
               ),
-              label: 'طلباتي'
+              label: AppLocalizations.of(context).navMyOrders
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.minimize_outlined
+              icon: Icon(
+                  FontAwesomeIcons.truck
               ),
-            label:'الرئيسية'
+            label: AppLocalizations.of(context).navHome
           ),
 
 

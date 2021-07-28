@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:seyana_tech/color.dart';
 import 'package:seyana_tech/reusableItems.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 
 class contactUs extends StatefulWidget {
@@ -28,7 +30,7 @@ class _contactUsState extends State<contactUs> {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          'اتصل بنا',
+          AppLocalizations.of(context).contactUs,
           textDirection: TextDirection.rtl,
           style: TextStyle(
               color: Colors.black,
@@ -43,21 +45,20 @@ class _contactUsState extends State<contactUs> {
           //mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(height: 40.0,),
-            reused_Textfield('الاسم'),
+            reused_Textfield(AppLocalizations.of(context).hintName),
             SizedBox(height: 20.0,),
-            reused_Textfield('رقم الهاتف'),
+            reused_Textfield(AppLocalizations.of(context).hintPhoneNum),
             SizedBox(height: 20.0,),
-            reused_Textfield('البريد الالكترونى'),
+            reused_Textfield( AppLocalizations.of(context).hintEmail),
             SizedBox(height: 50.0,),
             Container(
               height: 7 * 24.0,
               child: TextField(
                 maxLines: 7,
-                  textAlign: TextAlign.right,
                   enabled: true,
                   decoration: InputDecoration(
                       filled: true,
-                      hintText: 'الشكوى',
+                      hintText: AppLocalizations.of(context).hintComplain,
                       hintStyle: TextStyle(
                           fontFamily: 'CareemRegular',
                           fontSize: 20.0,
@@ -82,7 +83,7 @@ class _contactUsState extends State<contactUs> {
               ),
             ),
             SizedBox(height: 160.0,),
-            reusedButton('إرسال' , (){}),
+            reusedButton(AppLocalizations.of(context).hintSend , (){}),
           ],
         ),
       ),

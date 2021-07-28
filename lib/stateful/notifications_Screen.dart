@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seyana_tech/reusableItems.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class notifScreen extends StatefulWidget {
 
@@ -19,7 +20,7 @@ class _notifScreenState extends State<notifScreen> {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          'الاشعارات',
+          AppLocalizations.of(context).notifications,
           textDirection: TextDirection.rtl,
           style: TextStyle(
               color: Colors.black,
@@ -52,30 +53,30 @@ class _notifScreenState extends State<notifScreen> {
             icon: Icon(
               Icons.settings,
             ),
-            label: 'الإعدادات',
+            label: AppLocalizations.of(context).settings,
           ),
           BottomNavigationBarItem(
               icon: Icon(
                   FontAwesomeIcons.user
               ),
-              label: 'الحساب'
+              label: AppLocalizations.of(context).profile
           ),
           BottomNavigationBarItem(
               icon: Icon(
                   Icons.notifications
               ),
 
-              label: 'الاشعارات'
+              label: AppLocalizations.of(context).notifications
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.minimize_outlined
               ),
-              label: 'طلباتي'
+              label: AppLocalizations.of(context).navMyOrders
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.minimize_outlined
               ),
-              label:'الرئيسية'
+              label:AppLocalizations.of(context).navHome
           ),
 
 
@@ -102,7 +103,7 @@ class _notifScreenState extends State<notifScreen> {
                     Column(
                       children: [
                         Text(
-                          'قام محمد بطلبك',
+                          AppLocalizations.of(context).notificationsText1,
                           textDirection: TextDirection.rtl,
                           style: TextStyle(
                             color: Colors.black,

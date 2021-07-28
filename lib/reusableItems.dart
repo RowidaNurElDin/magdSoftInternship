@@ -20,35 +20,38 @@ class SettingsReusableCard extends StatelessWidget {
           child: Container(
             width: MediaQuery.of(context).size.width * 346 / 375,
             padding: EdgeInsets.symmetric(vertical: 25.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(right: 25.0),
+                    child: Text(
+                      cardText,
+                      textDirection: TextDirection.rtl,
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 22.0,
+                          fontFamily: 'CareemRegular'),
+                    ),
+                  ),
+                  Container(
 
-                Container(
-
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 25.0),
-                    child: Image(
-                      width: MediaQuery.of(context).size.width * 23.67 / 375,
-                      height: MediaQuery.of(context).size.height * 23.67 / 812,
-                      image: AssetImage(
-                        imageURL,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 25.0),
+                      child: Image(
+                        width: MediaQuery.of(context).size.width * 23.67 / 375,
+                        height: MediaQuery.of(context).size.height * 23.67 / 812,
+                        image: AssetImage(
+                          imageURL,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Container(
-                  padding: EdgeInsets.only(right: 25.0),
-                  child: Text(
-                    cardText,
-                    textDirection: TextDirection.rtl,
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 22.0,
-                        fontFamily: 'CareemRegular'),
-                  ),
-                ),
-              ],
+
+                ],
+              ),
             ),
           ),
         ),

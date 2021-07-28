@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:seyana_tech/color.dart';
 import 'package:seyana_tech/reusableItems.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class aboutUs extends StatelessWidget {
 
@@ -22,7 +24,7 @@ class aboutUs extends StatelessWidget {
         elevation: 0.0,
         centerTitle: true ,
         title: Text(
-            'عن التطبيق',
+          AppLocalizations.of(context).navSettings,
           textDirection: TextDirection.rtl,
           style: TextStyle(
             color: Colors.black,
@@ -44,7 +46,7 @@ class aboutUs extends StatelessWidget {
               bottom: 36.8
             ),
             child: Text(
-              'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.',
+              AppLocalizations.of(context).aboutUsText,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: 'CareemRegular',
@@ -53,9 +55,9 @@ class aboutUs extends StatelessWidget {
               ),
             ),
           ),
-          AboutUsReusableTitle('البريد الالكترونى'),
+          AboutUsReusableTitle(AppLocalizations.of(context).email),
           AboutUsReusableCard('Appadmin@exmple.com'),
-          AboutUsReusableTitle('رقم الجوال'),
+          AboutUsReusableTitle(AppLocalizations.of(context).phoneNumber),
           AboutUsReusableCard('+1542154544422')
         ],
       ),

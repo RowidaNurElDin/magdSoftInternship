@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seyana_tech/reusableItems.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class userProfile extends StatefulWidget {
 
@@ -17,7 +19,7 @@ class _userProfileState extends State<userProfile> {
         elevation: 0.0,
         centerTitle: true ,
         title: Text(
-          'الصفحة الشخصية',
+          AppLocalizations.of(context).profile,
           textDirection: TextDirection.rtl,
           style: TextStyle(
               color: Colors.black,
